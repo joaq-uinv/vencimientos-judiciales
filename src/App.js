@@ -5,6 +5,7 @@ import { v4 as uuidv4 } from "uuid";
 import Form from "./componentes/Form";
 import MainContainer from "./componentes/MainContainer";
 import Footer from "./componentes/Footer";
+import Header from "./componentes/Header";
 
 class App extends Component {
   constructor(props) {
@@ -58,9 +59,16 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Form actos={this.state.actos} agregarActo={this.agregarActo} />
-        <MainContainer actos={this.state.actos} borrarActo={this.borrarActo} />
-        <Footer />
+        <Header />
+        <div className="main">
+          {/* <Header /> */}
+          <Form actos={this.state.actos} agregarActo={this.agregarActo} />
+          <MainContainer
+            actos={this.state.actos}
+            borrarActo={this.borrarActo}
+          />
+          <Footer />
+        </div>
       </div>
     );
   }
