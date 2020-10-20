@@ -61,7 +61,6 @@ class App extends Component {
       <div className="App">
         <Header />
         <div className="main">
-          {/* <Header /> */}
           <Form actos={this.state.actos} agregarActo={this.agregarActo} />
           <MainContainer
             actos={this.state.actos}
