@@ -59,8 +59,12 @@ class Form extends Component {
             onChange={this.onChange}
             className="main-input"
           />
-          <label style={{ color: "#777" }} htmlFor="notificacion-acto">
-            Fecha de notificación de cédula
+          <label
+            style={{ color: "#777" }}
+            className="label-fecha"
+            htmlFor="notificacion-acto"
+          >
+            Fecha de notificación
           </label>
           <input
             type="date"
