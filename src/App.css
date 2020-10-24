@@ -139,26 +139,52 @@ body {
   cursor: pointer;
 }
 
-@media only screen and (max-width: 400px) {
+@media (max-width: 375px) {
+  .header {
+    min-width: 375px;
+  }
+
   .header-txt {
     font-size: 1rem;
+  }
+
+  .header-img {
+    width: 75px;
+    height: 100px;
+    margin-top: 1rem;
   }
 
   .main {
     display: grid;
   }
 
-  .form-container {
-    margin-right: 1.3rem;
+  .container-ppal {
+    margin: 1rem 0 0 0;
+  }
+
+  .footer {
+    margin-top: 5rem;
   }
 }
 
-@media only screen and (max-widht: 600px) {
-  .header-txt {
-    font-size: 1rem;
+@media (max-width: 414px) {
+  .header {
+    min-width: 414px;
   }
 
-  .main {
-    display: grid;
+  .header-txt {
+    font-size: 1.05rem;
+  }
+
+  .container-ppal {
+    margin: 1rem 0 0 0;
+  }
+
+  .label-fecha {
+    margin-right: 1rem;
+  }
+
+  .footer {
+    margin-top: 5rem;
   }
 }
