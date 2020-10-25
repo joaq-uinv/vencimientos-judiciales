@@ -19,7 +19,6 @@ body {
 
 .header {
   background: #1167b1;
-  min-width: 100vh;
   height: 150px;
 }
 
@@ -139,23 +138,22 @@ body {
   cursor: pointer;
 }
 
-@media (max-width: 375px) {
-  .header {
-    min-width: 375px;
-  }
-
+/*Móvil*/
+@media (max-width: 500px) {
   .header-txt {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 
   .header-img {
-    width: 75px;
-    height: 100px;
-    margin-top: 1rem;
+    width: 80px;
+    height: 115px;
+    margin-top: 0.75rem;
   }
 
   .main {
     display: grid;
+    align-items: center;
+    justify-items: center;
   }
 
   .container-ppal {
@@ -163,28 +161,7 @@ body {
   }
 
   .footer {
-    margin-top: 5rem;
-  }
-}
-
-@media (max-width: 414px) {
-  .header {
-    min-width: 414px;
-  }
-
-  .header-txt {
-    font-size: 1.05rem;
-  }
-
-  .container-ppal {
-    margin: 1rem 0 0 0;
-  }
-
-  .label-fecha {
-    margin-right: 1rem;
-  }
-
-  .footer {
-    margin-top: 5rem;
+    align-self: end;
+    margin-top: 1rem;
   }
 }
