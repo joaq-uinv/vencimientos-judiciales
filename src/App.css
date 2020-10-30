@@ -83,7 +83,6 @@ body {
 .lista-actos {
   list-style: none;
   padding-inline-start: 0px;
-  margin: 2rem;
 }
 
 .actos-container {
@@ -99,6 +98,14 @@ body {
 .actos-container:hover {
   box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
   z-index: 1;
+}
+
+.actos-container:first-child {
+  margin-top: 2rem;
+}
+
+.actos-container:last-child {
+  margin-bottom: 2rem;
 }
 
 .acto,
