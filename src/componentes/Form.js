@@ -58,6 +58,7 @@ class Form extends Component {
             value={this.state.caratulas}
             onChange={this.onChange}
             className="main-input"
+            required
           />
           <label
             style={{ color: "#777" }}
@@ -73,12 +74,14 @@ class Form extends Component {
             onChange={this.onChange}
             className="main-input"
             style={{ cursor: "pointer" }}
+            required
           />
           <select
             name="fuero"
             value={this.state.fuero}
             onChange={this.onChange}
             className="main-input"
+            required
           >
             {fueros.map((fuero) => (
               <option value={fuero.value} key={fuero.id}>
