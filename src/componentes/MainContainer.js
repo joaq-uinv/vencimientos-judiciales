@@ -1,5 +1,4 @@
 import React from "react";
-//componentes
 import Acto from "./Acto";
 
 const MainContainer = (props) => {
