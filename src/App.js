@@ -2,10 +2,10 @@ import React, { Component } from "react";
 import "./App.css";
 import { v4 as uuidv4 } from "uuid";
 //componentes
+import Header from "./componentes/Header";
 import Form from "./componentes/Form";
 import MainContainer from "./componentes/MainContainer";
 import Footer from "./componentes/Footer";
-import Header from "./componentes/Header";
 
 class App extends Component {
   constructor(props) {
@@ -66,8 +66,8 @@ class App extends Component {
             actos={this.state.actos}
             borrarActo={this.borrarActo}
           />
-          <Footer />
         </div>
+        <Footer />
       </div>
     );
   }
