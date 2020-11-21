@@ -157,10 +157,10 @@ export class Timer extends Component {
     } = this.state;
     return (
       <div>
-        {diasRestantes <= 0 &&
-        horasRestantes <= 0 &&
-        minutosRestantes <= 0 &&
-        segundosRestantes <= 0 ? (
+        {diasRestantes < 0 &&
+        horasRestantes < 0 &&
+        minutosRestantes < 0 &&
+        segundosRestantes < 0 ? (
           <p>¡Venció el plazo!</p>
         ) : (
           <p>
