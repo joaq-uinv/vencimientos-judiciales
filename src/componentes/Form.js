@@ -16,18 +16,12 @@ class Form extends Component {
 
   onSubmit = (e) => {
     e.preventDefault();
-
     //pasar al estado de app el valor de lo que se tipee en el input y se elija en el calendario
     this.props.agregarActo(
       this.state.caratulas,
       this.state.fechaNotificacion,
       this.state.fuero
     );
-    // console.log(this.state.caratulas); //!imprime lo tipeado en el input
-    // console.log(this.state.fechaNotificacion); //!imprime la fecha elegida en el input
-    // console.log(this.state.fuero); //!imprime el valor de la opción i.e civil-comercial o laboral
-
-    //volver a dejar el input y el calendario en blanco
     this.setState({
       caratulas: "",
       fechaNotificacion: "",
@@ -40,12 +34,10 @@ class Form extends Component {
       {
         label: "Civil/Comercial",
         value: "civil-comercial",
-        id: 1,
       },
       {
         label: "Laboral",
         value: "laboral",
-        id: 2,
       },
     ];
     return (
@@ -84,7 +76,7 @@ class Form extends Component {
             required
           >
             {fueros.map((fuero) => (
-              <option value={fuero.value} key={fuero.id}>
+              <option value={fuero.value} key={fuero.value}>
                 {fuero.label}
               </option>
             ))}

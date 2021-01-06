@@ -96,25 +96,12 @@ body {
   transition: all 1s ease;
 }
 
-.actos-container:hover {
-  margin: 10px 0 10px 0;
-  transform: scale(1.05);
-}
-
 .actos-container:first-child {
   margin-top: 2rem;
 }
 
-.actos-container:first-child:hover {
-  margin-bottom: 10px;
-}
-
 .actos-container:last-child {
   margin-bottom: 2rem;
-}
-
-.actos-container:last-child:hover {
-  margin-top: 10px;
 }
 
 .acto,

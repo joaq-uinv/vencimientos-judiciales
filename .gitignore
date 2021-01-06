@@ -17,6 +17,10 @@
 .env.development.local
 .env.test.local
 .env.production.local
+process.env
+src/componentes/icon.svg
+src/componentes/mev.png
+src/componentes/pjn.png
 
 npm-debug.log*
 yarn-debug.log*
