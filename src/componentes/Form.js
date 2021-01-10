@@ -7,8 +7,20 @@ class Form extends Component {
       caratulas: "",
       fechaNotificacion: "",
       fuero: "",
+      mostrarOpciones: false,
+      fuerosSelect: this.props.fuerosSelect,
+      fueroElegido: this.props.fuerosSelect && this.props.fuerosSelect[0],
     };
   }
+
+  toggleFlecha = () => {
+    this.setState((estadoAnterior) => ({
+      mostrarOpciones: !estadoAnterior.mostrarOpciones,
+    }));
+  };
+
+  elegirFuero = (fuero) =>
+    this.setState({ mostrarOpciones: false, fueroElegido: fuero });
 
   onChange = (e) => {
     this.setState({ [e.target.name]: e.target.value });
@@ -30,16 +42,6 @@ class Form extends Component {
   };
 
   render() {
-    const fueros = [
-      {
-        label: "Civil/Comercial",
-        value: "civil-comercial",
-      },
-      {
-        label: "Laboral",
-        value: "laboral",
-      },
-    ];
     return (
       <div className="form-container">
         <form className="main-form" onSubmit={this.onSubmit}>
@@ -68,19 +70,39 @@ class Form extends Component {
             style={{ cursor: "pointer" }}
             required
           />
-          <select
-            name="fuero"
-            value={this.state.fuero}
-            onChange={this.onChange}
-            className="main-input"
-            required
-          >
-            {fueros.map((fuero) => (
-              <option value={fuero.value} key={fuero.value}>
-                {fuero.label}
-              </option>
-            ))}
-          </select>
+          <section className="contenedor-select">
+            <span className="fuero-elegido">
+              {this.state.fueroElegido.label}
+            </span>
+            <span className="flecha-select" onClick={this.toggleFlecha}>
+              <span
+                className={`${
+                  this.state.mostrarOpciones
+                    ? "flecha-select-arriba"
+                    : "flecha-select-abajo"
+                }`}
+              />
+            </span>
+            <div
+              className={
+                this.state.mostrarOpciones
+                  ? "opciones-visibles"
+                  : "opciones-no-visibles"
+              }
+            >
+              {this.props.fuerosSelect.map((fuero) => (
+                <div
+                  value={fuero.value}
+                  key={fuero.value}
+                  onClick={() => this.elegirFuero(fuero)}
+                  className={this.state.fueroElegido === fuero ? "elegido" : ""}
+                  name="fuero"
+                >
+                  {fuero.label}
+                </div>
+              ))}
+            </div>
+          </section>
           <button type="submit" className="submit-btn">
             <i className="fa fa-plus"></i>
           </button>

@@ -17,6 +17,17 @@ class App extends Component {
     };
   }
 
+  fuerosSelect = [
+    {
+      label: "Civil/Comercial",
+      value: "civil-comercial",
+    },
+    {
+      label: "Laboral",
+      value: "laboral",
+    },
+  ];
+
   agregarActo = (caratula, fechaNotificacion, fuero) => {
     const nuevoActo = {
       caratula,
@@ -59,7 +70,11 @@ class App extends Component {
       <div className="App">
         <Header />
         <div className="main">
-          <Form actos={this.state.actos} agregarActo={this.agregarActo} />
+          <Form
+            actos={this.state.actos}
+            fuerosSelect={this.fuerosSelect}
+            agregarActo={this.agregarActo}
+          />
           <MainContainer
             actos={this.state.actos}
             borrarActo={this.borrarActo}

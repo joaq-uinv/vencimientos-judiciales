@@ -26,6 +26,7 @@ body {
 .header-txt {
   color: white;
   font-size: 1.5rem;
+  font-weight: normal;
   text-align: justify;
   padding: 1rem 0rem 0rem 1rem;
   display: inline;
@@ -39,6 +40,12 @@ body {
   padding-top: 1rem;
 }
 
+.main-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .form-container {
   background: white;
   display: flex;
@@ -49,14 +56,77 @@ body {
 }
 
 .main-input,
-.submit-btn,
-.main-select {
+.submit-btn {
   outline: none;
   padding: 0.5rem;
   margin: 1rem;
   font-size: 1rem;
   border: none;
   background: white;
+}
+
+.contenedor-select {
+  border: 1px solid #1167b1;
+  border-radius: 7px;
+}
+
+.fuero-elegido {
+  padding: 0.5rem;
+  position: relative;
+  top: 0.4rem;
+}
+
+.elegido {
+  padding: 0.5rem;
+  position: relative;
+  top: 2rem;
+  transition: all 0.3s ease;
+}
+
+.elegido:hover {
+  background: #1167b1;
+  color: #eee;
+}
+
+.flecha-select {
+  width: 2rem;
+  height: 2rem;
+  display: inline-block;
+  background: #1167b1;
+  border-radius: 0 5px 5px 0;
+}
+
+.flecha-select-abajo {
+  position: relative;
+  top: 1.25rem;
+  left: 0.05rem;
+  width: 0;
+  height: 0;
+  border-left: 0.5rem solid transparent;
+  border-right: 0.5rem solid transparent;
+  border-top: 0.5rem solid white;
+  cursor: pointer;
+}
+
+.flecha-select-arriba {
+  position: relative;
+  top: -0.5rem;
+  left: 0.05rem;
+  width: 0;
+  height: 0;
+  border-left: 0.5rem solid transparent;
+  border-right: 0.5rem solid transparent;
+  border-bottom: 0.5rem solid white;
+  cursor: pointer;
+}
+
+.opciones-no-visibles {
+  display: none;
+}
+
+.opciones-visibles {
+  display: flex;
+  flex-direction: column;
 }
 
 .submit-btn {
@@ -93,7 +163,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: all 1s ease;
+  animation: opacidad 0.5s ease;
 }
 
 .actos-container:first-child {
@@ -149,6 +219,15 @@ body {
 
 .footer a:hover {
   transform: scale(1.2);
+}
+
+@keyframes opacidad {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /*Móvil*/
