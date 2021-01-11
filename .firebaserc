@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "hosting-vencimientos-juds"
+    "default": "hosting-vencimientos-juds",
+    "calculadorajudicial": "calculadorajudicial",
+    "hosting-vencimientos-juds": "calculadorajudicial"
   }
 }

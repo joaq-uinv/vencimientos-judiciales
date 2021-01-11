@@ -21,6 +21,8 @@ body {
 .header {
   background: #1167b1;
   height: 150px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .header-txt {
@@ -29,21 +31,21 @@ body {
   font-weight: normal;
   text-align: justify;
   padding: 1rem 0rem 0rem 1rem;
-  display: inline;
-  float: left;
+  animation: entrada-header 0.5s ease;
 }
 
 .header-img {
   width: 100px;
   height: 125px;
-  float: right;
   padding-top: 1rem;
+  animation: entrada-header 0.5s ease;
 }
 
 .main-form {
   display: flex;
   justify-content: center;
   align-items: center;
+  animation: entrada-form 0.5s ease;
 }
 
 .form-container {
@@ -79,7 +81,6 @@ body {
 .elegido {
   padding: 0.5rem;
   position: relative;
-  top: 2rem;
   transition: all 0.3s ease;
 }
 
@@ -230,6 +231,28 @@ body {
   }
 }
 
+@keyframes entrada-header {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes entrada-form {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
 /*Móvil*/
 @media (max-width: 500px) {
   .header-txt {
@@ -243,9 +266,13 @@ body {
   }
 
   .main {
-    display: grid;
-    align-items: center;
-    justify-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .main-form {
+    flex-direction: column;
   }
 
   .container-ppal {
